@@ -1,4 +1,4 @@
-const mineflayer = require('mineflayer-forge');
+const mineflayer = require('mineflayer');
 
 function createBot() {
     const bot = mineflayer.createBot({
@@ -18,7 +18,7 @@ function createBot() {
 
     bot.on('end', (reason) => {
         console.log(`[NPC] Desconectado: ${reason}`);
-        console.log('[NPC] Reintentando en 25 segundos...');
+        console.log('[NPC] Reintentando en 25 segundos...`);
         setTimeout(createBot, 25000);
     });
 
