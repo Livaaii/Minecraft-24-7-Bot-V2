@@ -16,11 +16,11 @@ function createBot() {
         console.log('[NPC] El bot apareció correctamente en el mundo.');
     });
 
-    bot.on('end', (reason) => {
-        console.log(`[NPC] Desconectado: ${reason}`);
-        console.log('[NPC] Reintentando en 25 segundos...`);
-        setTimeout(createBot, 25000);
-    });
+bot.on('end', (reason) => {
+    console.log(`[NPC] Desconectado: ${reason}`);
+    console.log('[NPC] Reintentando en 25 segundos...');
+    setTimeout(createBot, 25000);
+});
 
     bot.on('error', (err) => {
         console.log(`[NPC] Error: ${err.message}`);
